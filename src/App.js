@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import GenerateQuoteButton from './components/Buttons/GenerateQuoteButton';
+import QuoteDisplay from './components/QuoteDisplay/QuoteDisplay';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [quote, setQuote] = useState({ content: "", author: "" });
+
+  return(
+    <>
+      <div className="MainDiv">
+      <div className='Display'>
+        <QuoteDisplay content={quote.content} author={quote.author}/>
+        </div>
+        <div>
+        <GenerateQuoteButton setQuote={setQuote}/>
+        </div>
+      </div>
+    </>
+  )
+  
 }
 
 export default App;

@@ -1,0 +1,25 @@
+/* Style for blockquote */
+blockquote {
+    font-size: 18px;
+    font-style: italic;
+    border-left: 3px solid #3498db;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Style for quote source */
+  blockquote p {
+    margin: 0;
+  }
+  
+  /* Add a subtle background color to the quote source */
+  blockquote footer {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+  }
+  
